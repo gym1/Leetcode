@@ -2,13 +2,11 @@
 // the question ask to reverse each work in the string
 // For example, "Let's take LeetCode contest" -> "s'teL ekat edoCteeL tsetnoc"
 
-
 // Thus, we use the same method from string reverse 
 // Then, we detect the whole string wehter it has space or at the end
 // if it has the space then reverse the word before space 
 // Then move on to the next word
 // until it at the end
-
 
 void string_reverse(char* s, int len)
 {
@@ -29,29 +27,19 @@ char* reverseWords(char* s)
     char* result = (char*)malloc((wordslen+1)*sizeof(char *));
     memcpy(result, s, wordslen+1);
     for(int i=0; i<=wordslen; ++i)
-    {
-        
+    {        
         if(result[i] == ' ' || result[i] == '\0')
         {
-            //printf("%d\n", i);
             if(inword)
             {
-                printf("########################\n");
-                printf("%d %d\n", i, wordhead);
-                printf("%s\n", result+wordhead);
-                
-                string_reverse(result+wordhead, i-wordhead);
-                
-                inword = false;
+              string_reverse(result+wordhead, i-wordhead); 
+              inword = false;
             }
         }
         else
         {
             if(!inword)
-            {
-                printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
-                printf("%d\n", i);
-                printf("%s\n", result+wordhead);                
+            {              
                 wordhead = i;
                 inword = true;
             }
