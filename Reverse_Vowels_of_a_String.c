@@ -1,4 +1,7 @@
-
+// The question ask to reverse the vowels in the string
+// Thus, we modify the reverse function from the string reverse
+// Then, create a hash table to store all the vowels,
+//.. 
 void reverse(int *a, char *s, int beg, int end)
 {
     while(beg<end)
