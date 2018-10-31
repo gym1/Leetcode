@@ -41,7 +41,7 @@ Explanation: You don't need to remove any of the intervals since they're already
 //
 //
 // First Approach
-//
+// Time Complexity is O(nlogn), space complexity is O(1).
 //
 // Inorder to have a sorted intervals array, we need to write a swap function for swaping two intervals
 // then write a quick sort using swap function
@@ -109,7 +109,7 @@ int eraseOverlapIntervals(struct Interval* intervals, int intervalsSize) {
 //
 //
 // Second Approach
-//
+// Time Complexity is O(nlogn), space complexity is O(1).
 //
 
 /**
