@@ -1,3 +1,10 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+
 char *reverseString(char* s)
 {
     // The time complexity is O(logn)
@@ -25,4 +32,13 @@ char *reverseString(char* s)
        s[i] = s[i]^s[len-i-1];
    }
    return s;
+}
+
+int main(int argc, char const *argv[])
+{
+	char temp[5] = "abs";
+	reverseString(temp);
+	printf("%s\n", temp);
+
+	return 0;
 }
